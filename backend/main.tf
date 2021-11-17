@@ -1,3 +1,8 @@
+provider "aws" {
+  region = "eu-west-1"
+}
+
+
 resource "aws_dynamodb_table" "terraform-state" {
  name           = "${var.bucket}-dynamodb"
  read_capacity  = 10
