@@ -56,7 +56,7 @@ To ensure traffic distribution I thought of the following
 
 To add an extra layer of security the following where done used
 <!-- UL -->
-* **Nat Gateway***: this is used for enabling the *ECS clusters* deployed in the private subnet to talk witht the internet
+* **Nat Gateway**: this is used for enabling the *ECS clusters* deployed in the private subnet to talk witht the internet
 * **IAM**: strict IAM roles and policies were used to ensure the principle of *least priveledges* was adhered to.
 
 To build the infrastructure as code **Terraform** was used and to automate the various process a **bash script** was used
