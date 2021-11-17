@@ -1,6 +1,19 @@
-
-
-
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+    }
+  }
+  backend "s3" {
+    bucket         = "${var.statebucket}"
+    key            = "state/terraform.tfstate"
+    region         = "eu-west-1"
+    encrypt        = true
+    kms_key_id     = "alias/terraform-bucket-key"
+    dynamodb_table = "terraform-state"
+    }
+}
 
 data "aws_availability_zones" "azs" {
   filter {
