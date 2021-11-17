@@ -142,8 +142,14 @@ ___
 |  [*] S3 Bucket                   |                              |
 
 <!--Headings -->
-# Services
-
-<!--Headings -->
 # Script
+
+<!-- body -->
+## 
+The sript is in 3 phase
+<!--OL -->
+1. The first phase is to create the backend bucket  and dynamodb that would be used by terraform to maintain the state-file of the project. This will prevent 2 devops engineer from launching together
+
+1. The Second phase is launching the infrastructure for the environment.
+1. The final part is pushing the dockerfile for ghost to the repo.
 
