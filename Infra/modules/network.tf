@@ -1,3 +1,5 @@
+#VPC Creation
+
 resource "aws_vpc" "main" {
     cidr_block = var.vpc_cidr
     enable_dns_support   = true
@@ -61,16 +63,7 @@ resource "aws_route_table" "public" {
   count  = length(var.availability-zones)
   vpc_id = aws_vpc.main.id
 
-  /*tags = merge(
-    var.environment,
-    {
-      "Name" = format(
-        "%s-public-%s-vpc",
-        var.environment,
-        element(var.availability-zones, count.index),
-      )
-    }
-  )*/
+
 }
 
 # Create private route tables
@@ -78,16 +71,7 @@ resource "aws_route_table" "private" {
   count  = length(var.availability-zones)
   vpc_id = aws_vpc.main.id
 
-  /*tags = merge(
-    var.environment,
-    {
-      "Name" = format(
-        "%s-private-%s-vpc",
-        var.environment,
-        element(var.availability-zones, count.index),
-      )
-    }
-  )*/
+
 }
 
 # Add default route to the public route table to allow traffic out to the Internet via Internet gateways
