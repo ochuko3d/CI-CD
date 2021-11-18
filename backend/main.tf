@@ -29,7 +29,7 @@ resource "aws_kms_alias" "key-alias" {
 
 
 resource "aws_s3_bucket" "terraform-state" {
- bucket = "${var.bucket}-Terraformstate-ochuko"
+ bucket = "${var.bucket}-terraformstate-ochuko"
  acl    = "private"
 
  lifecycle {
