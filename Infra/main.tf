@@ -33,3 +33,23 @@ module "modules" {
   artifactbucket            = "productionochukonordcloud"
   container_port            = 2368
 }
+
+output "repository" {
+  value = module.modules.source_repo_clone_url_http
+}
+    
+output "lb_address" {
+  value = module.modules.alb_address
+}
+
+output "lb_arn" {
+  value = module.modules.alb_arn
+}
+
+output "image_repo" {
+  value = module.modules.image_repo_url
+}
+
+output "image_repoarn" {
+  value = module.modules.image_repo_arn
+}    
