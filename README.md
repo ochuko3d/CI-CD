@@ -147,7 +147,7 @@ ___
 
 <!-- body -->
 ## 
-The sript is in 2 phase
+All you need to do is download the bash script ***ochuko.sh*** and it will build everything.The sript is in 2 phase
 <!--OL -->
 1. The first phase is setting up the core infrastructure which comprises of the network layer and the CI/CD pipeline. You will be prompted for the password of the aurora db that is to be created.
 
