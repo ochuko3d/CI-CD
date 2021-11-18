@@ -47,7 +47,8 @@ resource "aws_s3_bucket" "terraform-state" {
        sse_algorithm     = aws_kms_key.terraform-bucket-key1.id == "" ? "AES256" : "aws:kms"
      }
    }
- }*/
+ }
+ */
 }
 
 resource "aws_s3_bucket_public_access_block" "block" {
