@@ -50,7 +50,7 @@ To ensure traffic distribution I thought of the following
 <!-- UL -->
 * **Application Load Balancer**: unencrypted traffic is distributed to the load balancer target group, which comprises of ecs container running in different Availability zones (az)
 
-* **Cloudfront**: This will be used for content delivery across the globe by providing caching. It will also provide an extra layer of security by providing a WAF and help protect again DDCO attack.
+* **Cloudfront**: This will be used for content delivery across the globe by providing caching. It will also provide an extra layer of security by providing a WAF and help protect again DDOS attack.
 
 * **Route53**: This is used to deploy the domain name 
 
