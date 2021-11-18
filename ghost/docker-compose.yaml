@@ -1,0 +1,13 @@
+mysql:
+  image: mysql:5.7
+  ports:
+    - "3306:3306"
+  volumes:
+    - ghost-volume:/var/lib/ghost/content
+    - mysql-volume:/var/lib/mysql
+  environment:
+    database__client: ghostproduction
+    database__connection__host: ghostproduction
+    database__connection__user: ghostproduction
+    database__connection__password: ghostproduction
+    database__connection__database: ghostproduction
