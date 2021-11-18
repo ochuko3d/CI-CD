@@ -9,7 +9,7 @@ terraform {
     bucket         = "${var.statebucket}"
     key            = "state/terraform.tfstate"
     region         = "eu-west-1"
-    encrypt        = true
+  # encrypt        = true
   #  kms_key_id     = "alias/terraform-bucket-key"
   # dynamodb_table = "terraform-state"
     }
