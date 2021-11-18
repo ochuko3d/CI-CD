@@ -15,6 +15,10 @@ terraform {
     }
 }
 
+provider "aws" {
+  region = var.aws_region
+}
+
 data "aws_availability_zones" "azs" {
   filter {
     name   = "opt-in-status"
