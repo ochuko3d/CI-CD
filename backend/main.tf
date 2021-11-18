@@ -63,3 +63,7 @@ resource "aws_s3_bucket_public_access_block" "block" {
 output "statebucket" {
   value = aws_s3_bucket.terraform-state.id
 }
+output "tablename" {
+  value       = join("", aws_dynamodb_table.terraform-state.*.name)
+  description = "DynamoDB table name"
+}
