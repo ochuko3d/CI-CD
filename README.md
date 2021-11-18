@@ -56,7 +56,7 @@ To ensure traffic distribution I thought of the following
 
 To add an extra layer of security the following where done used
 <!-- UL -->
-* **Nat Gateway**: this is used for enabling the *ECS clusters* deployed in the private subnet to talk witht the internet
+* **Nat Gateway***: this is used for enabling the *ECS clusters* deployed in the private subnet to talk witht the internet
 * **IAM**: strict IAM roles and policies were used to ensure the principle of *least priveledges* was adhered to.
 
 To build the infrastructure as code **Terraform** was used and to automate the various process a **bash script** was used
@@ -67,6 +67,7 @@ To build the infrastructure as code **Terraform** was used and to automate the v
 ##
 <!--OL -->
 1. An Amazon Account, a set of credentials with Administrator permissions. ***Note***: In a production environment I would recommend locking permissions down to the bare minimum needed to operate the pipeline.
+
 1. AWS-CLI, you can check the version installed, then install it if not already installed
     ```
         aws --version
@@ -86,7 +87,7 @@ To build the infrastructure as code **Terraform** was used and to automate the v
         sudo mv terraform /usr/local/bin/
         export PATH=$PATH:/usr/local/bin/terraform
     ```
-
+1. Git needs to be installed on the workstation
 
 <!--Headings -->
 # Architecture
@@ -146,10 +147,20 @@ ___
 
 <!-- body -->
 ## 
-The sript is in 3 phase
+The sript is in 2 phase
 <!--OL -->
-1. The first phase is to create the backend bucket  and dynamodb that would be used by terraform to maintain the state-file of the project. This will prevent 2 devops engineer from launching together
+1. The first phase is setting up the core infrastructure which comprises of the network layer and the CI/CD pipeline. You will be prompted for the password of the aurora db that is to be created.
 
-1. The Second phase is launching the infrastructure for the environment.
-1. The final part is pushing the dockerfile for ghost to the repo.
+    <!-- Github Markdown--->
 
+         ```bash
+                read -p "enter the RDS Aurora database password: " password
+         ```
+    After that its smooth sailing deploying everything else
+1. The second part is pushing the dockerfile into the newly created code repository. it will prompt you for username and email
+    <!-- Github Markdown--->
+
+         ```bash
+                read -p "enter your username: " username
+                read -p "enter your email: " email
+         ```
