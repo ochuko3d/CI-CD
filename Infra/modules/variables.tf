@@ -141,13 +141,3 @@ variable "availability-zones" {
   type        = list(string)
   description = "A list of availability zones"
 }
-/*
-variable "dhcp_options_domain_name_servers" {
-  type = list(string)
-  default = [ "value" ]
-}
-
-variable "dhcp_options_enabled" {
-    type = bool
-    default = true
-}*/
