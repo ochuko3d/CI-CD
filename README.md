@@ -152,13 +152,14 @@ The sript is in 2 phase
 1. The first phase is setting up the core infrastructure which comprises of the network layer and the CI/CD pipeline. You will be prompted for the password of the aurora db that is to be created.
 
     <!-- Github Markdown--->
-
+    <!--Code Block-->
          ```bash
                 read -p "enter the RDS Aurora database password: " password
          ```
     After that its smooth sailing deploying everything else
 1. The second part is pushing the dockerfile into the newly created code repository. it will prompt you for username and email
     <!-- Github Markdown--->
+    <!--Code Block-->
 
          ```bash
                 read -p "enter your username: " username
