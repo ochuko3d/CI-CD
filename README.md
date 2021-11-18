@@ -5,7 +5,7 @@
 ___
 <!-- body -->
 ##
-Drone shuttle have reached out to us and after going through their requirement the following requirements have been infered and are critical for their new platfoem modernization.
+Drone shuttle have reached out to us and after going through their requirement the following requirements have been infered and are critical for their new platform modernization.
 
 <!-- horizonal rule -->
 ___
