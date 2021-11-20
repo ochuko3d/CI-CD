@@ -4,7 +4,7 @@
 ___
 <!-- body -->
 ##
-The customer has made an additional request to claer all the post at a minute's notice.
+The customer has made an additional request to remove all the post at a minute's notice.
 
 <!--Headings -->
 # Thought Process
