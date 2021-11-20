@@ -34,7 +34,7 @@ We will be using the later.
 ##
 
 <!--OL -->
-1. the lambda role need by AWSCLI will be created during the terraform process and fixed in the script
+1. The lambda role needed by AWSCLI will be created during the terraform process and fixed in the script
 1. All other necessary details like the subnet groups and SG will equall be modified for the customer afer the build.
 1. The python function needed has been saved as clear.zip
 1. The user will however have to unzip the lcear.app and  modify the ***rds_config.py*** file for the relevant config parameters like the password as this will be unique to them and zip the file back up.
