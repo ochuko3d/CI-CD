@@ -4,7 +4,7 @@
 ___
 <!-- body -->
 ##
-The customer has made an additional request to claer all the post at a minutes notice.
+The customer has made an additional request to claer all the post at a minute's notice.
 
 <!--Headings -->
 # Thought Process
@@ -12,7 +12,7 @@ The customer has made an additional request to claer all the post at a minutes n
 ##
 We are currently using an external RDS for the database and would require the customer connects to data and clear the post table.
 
-They are ideally 2 ways to clear a table 
+There are ideally 2 ways to clear a table 
 <!-- body -->
 ##
 <!--OL -->
