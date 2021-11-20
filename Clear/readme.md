@@ -16,7 +16,7 @@ There are ideally 2 ways to clear a table
 <!-- body -->
 ##
 <!--OL -->
-1. One at a time using, you have to be specific about what you deleting.
+1. One at a time meaning you have to be specific about what you are deleting.
     ```
         DELETE FROM table_name
         WHERE condition;
