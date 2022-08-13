@@ -121,8 +121,7 @@ phases:
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_URI="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG"
       - DOCKER_LOGIN=`aws ecr get-login --region $AWS_DEFAULT_REGION`
-      - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`
-      - IMAGE_TAG=$${COMMIT_HASH:=latest}         
+      - PASSWORD=`echo $DOCKER_LOGIN | cut -d' ' -f6`  
       - mkdir outputs
   build:
     commands:
